@@ -8,7 +8,8 @@ const filesToCopy = ["index.html", "styles.css", "app.js"];
 const foldersToCopy = ["Cali-creams-images", "Cali-creams-videos"];
 const videosToPublish = [
   "cali-creams-promotion-video-web.mp4",
-  "cali-creams-promotion-video-All.mp4"
+  "cali-creams-promotion-video-All.mp4",
+  "cali-creams-promo-mobile.webp"
 ];
 
 if (fs.existsSync(distDir)) {

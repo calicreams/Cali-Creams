@@ -341,9 +341,23 @@ textarea {
   line-height: 1;
 }
 
+.promo-media-wrap {
+  position: relative;
+}
+
 .promo-video {
   width: 100%;
   display: block;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: #0f0c09;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.promo-mobile-anim {
+  display: none;
+  width: 100%;
   border-radius: 16px;
   border: 1px solid var(--line);
   background: #0f0c09;
@@ -942,5 +956,13 @@ textarea:focus,
   input,
   textarea {
     font-size: 16px;
+  }
+
+  .promo-video {
+    display: none;
+  }
+
+  .promo-mobile-anim {
+    display: block;
   }
 }
