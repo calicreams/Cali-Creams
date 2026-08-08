@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "build": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"Remove-Item -Recurse -Force dist -ErrorAction SilentlyContinue; New-Item -ItemType Directory dist | Out-Null; Copy-Item index.html,styles.css,app.js dist; Copy-Item Cali-creams-images dist\\Cali-creams-images -Recurse\""
+    "build": "node build.js"
   },
   "keywords": [
     "ice-cream",
