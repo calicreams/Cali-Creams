@@ -138,17 +138,19 @@
                 muted
                 loop
                 playsinline
-                preload="auto"
+                preload="none"
                 poster="Cali-creams-images/pic-4.png"
                 aria-label="Cream Cali promotional video"
               >
-                <source src="Cali-creams-videos/cali-creams-promotion-video-web.mp4" type="video/mp4" />
-                <source src="Cali-creams-videos/cali-creams-promotion-video-All.mp4" type="video/mp4" />
+                <source data-src="Cali-creams-videos/cali-creams-promotion-video-web.mp4" type="video/mp4" />
+                <source data-src="Cali-creams-videos/cali-creams-promotion-video-All.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <img
                 class="promo-mobile-anim"
                 src="Cali-creams-videos/cali-creams-promo-mobile.webp"
+                loading="eager"
+                decoding="async"
                 alt="Cream Cali promotional animation"
               />
             </div>

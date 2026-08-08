@@ -122,8 +122,14 @@ if (form) {
 }
 
 const promoVideo = document.querySelector('.promo-video');
+const isMobilePromo = window.matchMedia('(max-width: 620px)').matches;
 
-if (promoVideo) {
+if (promoVideo && !isMobilePromo) {
+  promoVideo.querySelectorAll('source[data-src]').forEach((source) => {
+    source.src = source.dataset.src;
+  });
+  promoVideo.load();
+
   promoVideo.muted = true;
   promoVideo.defaultMuted = true;
   promoVideo.volume = 0;
@@ -152,6 +158,9 @@ if (promoVideo) {
       startPromoVideo();
     }
   });
+} else if (promoVideo && isMobilePromo) {
+  promoVideo.pause();
+  promoVideo.removeAttribute('autoplay');
 }
 
 const revealElements = document.querySelectorAll('.reveal');
