@@ -121,6 +121,33 @@ if (form) {
   form.addEventListener('submit', handleSubmit);
 }
 
+const promoVideo = document.querySelector('.promo-video');
+
+if (promoVideo) {
+  promoVideo.muted = true;
+  promoVideo.setAttribute('muted', '');
+  promoVideo.setAttribute('playsinline', '');
+  promoVideo.setAttribute('webkit-playsinline', '');
+
+  const startPromoVideo = () => {
+    if (promoVideo.paused) {
+      const playPromise = promoVideo.play();
+      if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(() => {});
+      }
+    }
+  };
+
+  promoVideo.addEventListener('loadeddata', startPromoVideo);
+  promoVideo.addEventListener('canplay', startPromoVideo);
+  window.addEventListener('load', startPromoVideo);
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) {
+      startPromoVideo();
+    }
+  });
+}
+
 const revealElements = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window && revealElements.length > 0) {
   const observer = new IntersectionObserver(
