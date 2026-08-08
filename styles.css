@@ -321,6 +321,36 @@ textarea {
   object-fit: cover;
 }
 
+.promo-video-section {
+  padding-top: 48px;
+  padding-bottom: 28px;
+}
+
+.promo-video-card {
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.promo-video-card h2 {
+  margin: 0 0 16px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 3vw, 2.9rem);
+  line-height: 1;
+}
+
+.promo-video {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: #0f0c09;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 .flavor-copy {
   padding: 18px;
 }
@@ -776,6 +806,11 @@ textarea:focus,
     padding: 52px 0;
   }
 
+  .promo-video-section {
+    padding-top: 36px;
+    padding-bottom: 16px;
+  }
+
   .site-nav,
   .order-btn {
     display: none;
@@ -846,6 +881,7 @@ textarea:focus,
   }
 
   .contact-card,
+  .promo-video-card,
   .content-card,
   .process-panel,
   .steps-card,
