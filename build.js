@@ -5,7 +5,7 @@ const rootDir = __dirname;
 const distDir = path.join(rootDir, "dist");
 
 const filesToCopy = ["index.html", "styles.css", "app.js"];
-const foldersToCopy = ["Cali-creams-images"];
+const foldersToCopy = ["Cali-creams-images", "Cali-creams-videos"];
 
 if (fs.existsSync(distDir)) {
   fs.rmSync(distDir, { recursive: true, force: true });
