@@ -6,6 +6,10 @@ const distDir = path.join(rootDir, "dist");
 
 const filesToCopy = ["index.html", "styles.css", "app.js"];
 const foldersToCopy = ["Cali-creams-images", "Cali-creams-videos"];
+const videosToPublish = [
+  "cali-creams-promotion-video-web.mp4",
+  "cali-creams-promotion-video-All.mp4"
+];
 
 if (fs.existsSync(distDir)) {
   fs.rmSync(distDir, { recursive: true, force: true });
@@ -22,7 +26,17 @@ for (const fileName of filesToCopy) {
 for (const folderName of foldersToCopy) {
   const source = path.join(rootDir, folderName);
   const destination = path.join(distDir, folderName);
-  fs.cpSync(source, destination, { recursive: true });
+  if (folderName !== "Cali-creams-videos") {
+    fs.cpSync(source, destination, { recursive: true });
+    continue;
+  }
+
+  fs.mkdirSync(destination, { recursive: true });
+  for (const videoName of videosToPublish) {
+    const videoSource = path.join(source, videoName);
+    const videoDestination = path.join(destination, videoName);
+    fs.copyFileSync(videoSource, videoDestination);
+  }
 }
 
 console.log("Build complete: dist folder generated.");

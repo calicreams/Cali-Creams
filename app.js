@@ -125,7 +125,10 @@ const promoVideo = document.querySelector('.promo-video');
 
 if (promoVideo) {
   promoVideo.muted = true;
+  promoVideo.defaultMuted = true;
+  promoVideo.volume = 0;
   promoVideo.setAttribute('muted', '');
+  promoVideo.setAttribute('autoplay', '');
   promoVideo.setAttribute('playsinline', '');
   promoVideo.setAttribute('webkit-playsinline', '');
 
@@ -140,6 +143,9 @@ if (promoVideo) {
 
   promoVideo.addEventListener('loadeddata', startPromoVideo);
   promoVideo.addEventListener('canplay', startPromoVideo);
+  promoVideo.addEventListener('playing', () => {
+    promoVideo.removeAttribute('poster');
+  });
   window.addEventListener('load', startPromoVideo);
   document.addEventListener('visibilitychange', () => {
     if (!document.hidden) {

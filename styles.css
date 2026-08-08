@@ -351,6 +351,13 @@ textarea {
   object-fit: cover;
 }
 
+.promo-video::-webkit-media-controls-start-playback-button,
+.promo-video::-webkit-media-controls-play-button,
+.promo-video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
 .flavor-copy {
   padding: 18px;
 }
