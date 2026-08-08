@@ -1,0 +1,24 @@
+{
+  "name": "cali-creams-spa",
+  "version": "1.0.0",
+  "description": "Cali Creams responsive single-page website with contact form email integration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"Remove-Item -Recurse -Force dist -ErrorAction SilentlyContinue; New-Item -ItemType Directory dist | Out-Null; Copy-Item index.html,styles.css,app.js dist; Copy-Item Cali-creams-images dist\\Cali-creams-images -Recurse\""
+  },
+  "keywords": [
+    "ice-cream",
+    "spa",
+    "contact-form",
+    "nodemailer"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.14"
+  }
+}
