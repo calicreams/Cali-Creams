@@ -293,9 +293,10 @@ textarea {
 }
 
 .btn-secondary {
-  border-color: rgba(28, 73, 130, 0.2);
-  background: rgba(255, 255, 255, 0.14);
+  background: #ffffff;
   color: var(--brand-blue);
+  border-color: rgba(28, 73, 130, 0.2);
+  box-shadow: 0 6px 18px rgba(8, 21, 41, 0.12);
 }
 
 .feature-strip {
@@ -538,6 +539,7 @@ textarea {
 
 .contact-card p {
   color: rgba(238, 244, 255, 0.8);
+  line-height: 1.6;
 }
 
 form {
@@ -1017,6 +1019,7 @@ textarea:focus,
 @media (max-width: 620px) {
   .container {
     width: min(100vw - 28px, 1180px);
+    line-height: 1.35;
   }
 
   .brand-text {
