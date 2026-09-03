@@ -1,6 +1,6 @@
-# Cream Cali SPA
+# Cali Creams SPA
 
-Responsive single-page website for Cream Cali with a contact form that sends emails.
+Responsive single-page website for Cali Creams with a contact form that sends emails.
 
 ## Features
 

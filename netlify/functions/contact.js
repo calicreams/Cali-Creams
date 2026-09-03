@@ -50,10 +50,10 @@ exports.handler = async (event) => {
     const toEmail = process.env.TO_EMAIL || process.env.SMTP_USER;
 
     await transporter.sendMail({
-      from: `Cream Cali Website <${fromEmail}>`,
+      from: `Cali Creams Website <${fromEmail}>`,
       replyTo: email,
       to: toEmail,
-      subject: `New Cream Cali inquiry from ${name}`,
+      subject: `New Cali Creams inquiry from ${name}`,
       text: [
         "New contact form submission",
         "",
